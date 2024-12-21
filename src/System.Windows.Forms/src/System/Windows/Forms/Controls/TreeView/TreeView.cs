@@ -34,9 +34,6 @@ public partial class TreeView : Control
     private const string BackSlash = "\\";
     private const int DefaultTreeViewIndent = 19;
 
-    // To hold created dark mode brush for deletion
-    private HBRUSH _hBrush;
-
     private DrawTreeNodeEventHandler? _onDrawNode;
     private NodeLabelEditEventHandler? _onBeforeLabelEdit;
     private NodeLabelEditEventHandler? _onAfterLabelEdit;
