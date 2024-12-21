@@ -56,8 +56,7 @@ public partial class ListView : Control
     private View _viewStyle = View.LargeIcon;
     private string? _toolTipCaption = string.Empty;
 
-    // To hold created dark mode brush for deletion
-    private HBRUSH _hBrush;
+    private HBRUSH _hBrush; // To hold created dark mode brush for deletion
 
     private const int LISTVIEWSTATE_ownerDraw = 0x00000001;
     private const int LISTVIEWSTATE_allowColumnReorder = 0x00000002;

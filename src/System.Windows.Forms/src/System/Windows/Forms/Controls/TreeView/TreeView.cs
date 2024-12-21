@@ -60,6 +60,8 @@ public partial class TreeView : Control
     private bool _hoveredAlready;
     private bool _rightToLeftLayout;
 
+    private HBRUSH _hBrush;     // To hold created dark mode brush for deletion
+
     private nint _mouseDownNode = 0; // ensures we fire nodeClick on the correct node
 
     private const int TREEVIEWSTATE_hideSelection = 0x00000001;
@@ -3281,7 +3283,8 @@ public partial class TreeView : Control
             case PInvokeCore.WM_CTLCOLOREDIT:
                 // Default handling of edit label colors
                 m.ResultInternal = (LRESULT)0;
- #pragma warning disable WFO5001 // Type is for evaluation purposes only and is subject to change or removal in future updates. Suppress this diagnostic to proceed.
+
+#pragma warning disable WFO5001 // Type is for evaluation purposes only and is subject to change or removal in future updates. Suppress this diagnostic to proceed.
                 if (Application.IsDarkModeEnabled)
                 {
                     // Make background of dark mode edit labels the correct color
